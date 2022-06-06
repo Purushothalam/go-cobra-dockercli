@@ -1,6 +1,10 @@
 pipeline {
     agent any
     
+    tools{
+        go 'go-config'
+    }
+    
     stages{
         stage("Build"){
             steps {
