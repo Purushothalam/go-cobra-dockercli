@@ -23,6 +23,15 @@ pipeline {
 		stage("Artifactory") {
 		    steps {
 			    echo "*****Started pushing binaries to the artifactory*****"
+			    
+			    rtUpload(
+			        serverId: 'jfrog-artifact',
+				spec: '''{
+				        "files": [
+					     "pattern": "dockercli",
+					     "target": "test-artifact/go-binaries/"
+					]}'''
+			    )
 			}
 		}
 	}
