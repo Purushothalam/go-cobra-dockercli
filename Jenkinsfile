@@ -28,7 +28,7 @@ pipeline {
 			        serverId: 'jfrog-artifact',
 				spec: '''{
 				        "files": [
-					     "pattern": "dockercli",
+					     "pattern": "/var/jenkins_home/workspace/cobra-cli-jfrog/dockercli",
 					     "target": "test-artifact/go-binaries/"
 					]}'''
 			    )
