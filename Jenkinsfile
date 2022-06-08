@@ -14,7 +14,7 @@ pipeline {
 		}
 		stage("Build") {
 		    steps {
-				echo ""*****Started Building the project"*****"
+				echo "*****Started Building the project*****"
 			    sh 'go version'
 				sh 'go build .'
 				
